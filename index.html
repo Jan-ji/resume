@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Muhammad Qasim Jan — Full-Stack (MERN) &amp; MLOps</title>
-<meta name="description" content="Final-year Computer Science student at LUMS. Full-stack web engineering on the MERN stack and MLOps." />
+<title>Muhammad Qasim Jan — Full-Stack, Mobile &amp; MLOps</title>
+<meta name="description" content="Final-year Computer Science student at LUMS. Full-stack web and Flutter mobile engineering, and MLOps." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
     --muted:#93968D;
     --soft-text:#C7CAC2;
     --line:#262A2D;
-    --accent:#33B981;                       /* emerald — kept from the light version, brightened for dark */
+    --accent:#33B981;
     --accent-soft:rgba(51,185,129,.10);
     --accent-border:rgba(51,185,129,.32);
     --maxw:1080px;
@@ -43,7 +43,6 @@
   .eyebrow{display:inline-flex;align-items:center;gap:10px;}
   .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent);display:inline-block;}
 
-  /* nav */
   nav{position:sticky;top:0;z-index:50;background:rgba(15,17,19,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:62px;}
   .brand{font-family:"JetBrains Mono",monospace;font-size:13px;letter-spacing:.02em;font-weight:500;}
@@ -54,7 +53,6 @@
   .nav-cta:hover{background:var(--accent);color:#0C1411;}
   @media(max-width:680px){.nav-links a:not(.nav-cta){display:none;}}
 
-  /* hero */
   header.hero{padding:84px 0 66px;border-bottom:1px solid var(--line);}
   .hero h1{
     font-family:"Bricolage Grotesque",sans-serif;
@@ -77,21 +75,18 @@
   .btn-ghost{border:1px solid var(--line);color:var(--ink);background:transparent;}
   .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
 
-  /* sections */
   section{padding:72px 0;border-bottom:1px solid var(--line);}
   .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:38px;}
   .sec-head h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:clamp(24px,3.4vw,32px);letter-spacing:-.01em;margin:0;}
   .sec-head .mark{width:26px;height:2px;background:var(--accent);flex:none;}
   .sec-count{margin-left:auto;}
 
-  /* tags + readouts */
   .tags{display:flex;flex-wrap:wrap;gap:7px;}
   .tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.02em;padding:5px 9px;border:1px solid var(--line);border-radius:6px;color:var(--muted);background:var(--bg-2);}
   .readout{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--accent-border);background:var(--accent-soft);border-radius:8px;padding:7px 12px;margin:2px 8px 2px 0;}
   .readout b{font-family:"JetBrains Mono",monospace;font-weight:500;font-size:15px;color:var(--accent);}
   .readout span{font-size:13px;color:var(--soft-text);}
 
-  /* projects */
   .work{display:grid;grid-template-columns:150px 1fr;gap:30px;padding:30px 0;border-top:1px solid var(--line);}
   .work:first-child{border-top:none;}
   @media(max-width:760px){.work{grid-template-columns:1fr;gap:14px;}}
@@ -101,7 +96,6 @@
   .work-body p{margin:0 0 14px;color:var(--soft-text);font-size:16px;max-width:62ch;}
   .work-stack{margin-top:10px;}
 
-  /* experience */
   .xp-row{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);}
   .xp-row:first-child{border-top:none;}
   @media(max-width:680px){.xp-row{grid-template-columns:1fr;gap:6px;}}
@@ -111,13 +105,11 @@
   .xp-row ul{margin:0;padding-left:18px;color:var(--soft-text);font-size:15.5px;}
   .xp-row li{margin-bottom:6px;}
 
-  /* skills */
   .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
   @media(max-width:680px){.skill-grid{grid-template-columns:1fr;}}
   .skill-block h4{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;}
   .skill-block .items{display:flex;flex-wrap:wrap;gap:7px;}
 
-  /* contact */
   .contact h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(30px,5vw,50px);letter-spacing:-.02em;margin:0 0 14px;max-width:16ch;}
   .contact h2 em{font-style:normal;color:var(--accent);}
   .contact p{color:var(--soft-text);max-width:52ch;margin:0 0 28px;}
@@ -127,7 +119,6 @@
   .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   .foot-in span{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);}
 
-  /* a11y + motion */
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
   .reveal.in{opacity:1;transform:none;}
@@ -153,29 +144,28 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="mono eyebrow">Full-Stack (MERN) &amp; MLOps</span>
-    <h1>I build full-stack products and the <em>ML systems</em> behind them.</h1>
-    <p class="intro">I'm a final-year Computer Science student at LUMS, graduating in 2026. I work across two areas in equal measure — full-stack web engineering on the MERN stack, and MLOps, taking ML and LLM systems toward production. Across three roles and a set of capstone and course projects, I've shipped web platforms with real users and built production-style ML pipelines.</p>
+    <span class="mono eyebrow">Full-Stack, Mobile &amp; MLOps</span>
+    <h1>I build web and mobile products and the <em>ML systems</em> behind them.</h1>
+    <p class="intro">I'm a final-year Computer Science student at LUMS, graduating in 2026. I work across full-stack web engineering, Flutter mobile development, and MLOps, taking ML and LLM systems toward production. Across three roles and a set of capstone and course projects, I've shipped web platforms with real users and built production-style ML pipelines.</p>
 
     <div class="telemetry">
-      <span>BSc Computer Science · LUMS · 2026</span>
+      <span>BS Computer Science · LUMS · 2026</span>
       <span>Lahore, PK · open to remote</span>
     </div>
 
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:m33qasim@gmail.com">Email me</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/qasim" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/qasim-jann" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </header>
 
-<!-- ============ PROJECTS (CV projects only — no overlap with experience) ============ -->
 <section id="projects">
   <div class="wrap">
     <div class="sec-head">
       <span class="mark"></span>
       <h2>Projects</h2>
-      <span class="mono sec-count">03</span>
+      <span class="mono sec-count">05</span>
     </div>
 
     <div class="work-list">
@@ -191,6 +181,34 @@
           <div class="work-stack">
             <span class="readout"><b>6</b><span>scoring dimensions</span></span>
             <span class="readout"><b>&lt;1 min</b><span>to surface a regression</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="work reveal">
+        <div class="work-meta">
+          <span class="kind">Mobile · Full-Stack</span>
+          <span class="when">Flutter · TypeScript · AWS · Jan–Apr 2026</span>
+        </div>
+        <div class="work-body">
+          <h3>FieldSurvey: offline-first survey collection app</h3>
+          <p>A Flutter app that renders surveys dynamically from JSON definitions, stores responses on the device, and syncs them automatically when the connection returns. Backed by a TypeScript REST API with JWT authentication, deployed on AWS, with CI testing through GitHub Actions.</p>
+          <div class="work-stack">
+            <span class="tag">Flutter</span><span class="tag">Offline-first</span><span class="tag">REST API</span><span class="tag">JWT</span><span class="tag">AWS</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="work reveal">
+        <div class="work-meta">
+          <span class="kind">Mobile</span>
+          <span class="when">Flutter · Firebase · Sep–Dec 2024</span>
+        </div>
+        <div class="work-body">
+          <h3>ExpenseSnap: receipt-scanning expense tracker</h3>
+          <p>A Flutter expense tracker that scans receipts with the camera and extracts amounts and dates using on-device text recognition with Google ML Kit. Uses Riverpod for state management, Firebase for authentication and cloud sync, and sends budget alert notifications.</p>
+          <div class="work-stack">
+            <span class="tag">Flutter</span><span class="tag">ML Kit</span><span class="tag">Riverpod</span><span class="tag">Firebase</span>
           </div>
         </div>
       </article>
@@ -228,7 +246,6 @@
   </div>
 </section>
 
-<!-- ============ EXPERIENCE (internships — no overlap with projects) ============ -->
 <section id="experience">
   <div class="wrap">
     <div class="sec-head">
@@ -244,7 +261,7 @@
           <span class="date">Dec 2025 – Feb 2026</span>
         </div>
         <ul>
-          <li>Shipped an internal document management platform adopted by 3 product teams as a replacement for their ad-hoc file-sharing workflows.</li>
+          <li>Shipped an internal document management platform in Flutter, adopted by 3 product teams as a replacement for their ad-hoc file-sharing workflows.</li>
           <li>Built the testing and CI pipeline from scratch — 95% code coverage, 40+ quality issues caught before deployment.</li>
         </ul>
       </div>
@@ -276,7 +293,6 @@
   </div>
 </section>
 
-<!-- ============ SKILLS ============ -->
 <section id="skills">
   <div class="wrap">
     <div class="sec-head">
@@ -288,7 +304,14 @@
       <div class="skill-block reveal">
         <h4>Full-Stack / Web</h4>
         <div class="items">
-          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Django</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span><span class="tag">REST</span><span class="tag">JWT</span><span class="tag">WebSockets</span><span class="tag">Redis</span><span class="tag">Responsive Design</span>
+          <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Django</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span><span class="tag">REST</span><span class="tag">JWT</span><span class="tag">WebSockets</span><span class="tag">Redis</span><span class="tag">Responsive Design</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Mobile</h4>
+        <div class="items">
+          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Riverpod</span><span class="tag">Firebase</span><span class="tag">ML Kit</span><span class="tag">REST API Integration</span><span class="tag">Widget Testing</span>
         </div>
       </div>
 
@@ -302,21 +325,20 @@
       <div class="skill-block reveal">
         <h4>Languages</h4>
         <div class="items">
-          <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">C++</span><span class="tag">Go</span><span class="tag">SQL</span><span class="tag">Haskell</span>
+          <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">Dart</span><span class="tag">JavaScript</span><span class="tag">C++</span><span class="tag">Go</span><span class="tag">SQL</span><span class="tag">Haskell</span>
         </div>
       </div>
 
       <div class="skill-block reveal">
         <h4>Systems &amp; Tooling</h4>
         <div class="items">
-          <span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">Microservices</span><span class="tag">Distributed Systems</span><span class="tag">Raft</span><span class="tag">Cloud Storage</span><span class="tag">Agile / Scrum</span>
+          <span class="tag">Git</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Microservices</span><span class="tag">Distributed Systems</span><span class="tag">Raft</span><span class="tag">Cloud Storage</span><span class="tag">Agile / Scrum</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
 <section id="contact" class="contact">
   <div class="wrap">
     <span class="mono eyebrow">Contact</span>
@@ -324,7 +346,7 @@
     <p>Email or LinkedIn is quickest — I read everything and reply within a day. Happy to talk about roles, projects, or just compare notes.</p>
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:m33qasim@gmail.com">m33qasim@gmail.com</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/qasim" target="_blank" rel="noopener">linkedin.com/in/qasim</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/qasim-jann" target="_blank" rel="noopener">linkedin.com/in/qasim-jann</a>
       <a class="btn btn-ghost" href="tel:+923315453807">+92 331 5453807</a>
     </div>
   </div>
@@ -333,7 +355,7 @@
 <footer>
   <div class="wrap foot-in">
     <span>Muhammad Qasim Jan · Lahore, Pakistan</span>
-    <span>Full-Stack (MERN) &amp; MLOps</span>
+    <span>Full-Stack, Mobile &amp; MLOps</span>
   </div>
 </footer>
 
